@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First website</title>
+
+</head>
+
+<body>
+    <div class="main">
+
+        <form action="{{ url_for('predict') }}" method='post'>
+            <h2>Profit of the Startup</h2>
+            <div class="body_form">
+                
+                <div class="left_side">
+                    <h4>Enter R&d of your Startup</h4><input id="first" name="rd" placeholder="Enter you R&d "
+                        required="required">
+                    <h4>Adminstration of your Startup</h4><input id="second" name="ad" placeholder="Adminstration"
+                        required="required">
+                </div>
+
+                <div class="right_side">
+                    <h4>Enter State of your Startup</h4>
+                    <label for="state">State</label>
+                    <select name="State" id="source">
+                        <option value="New York">New York</option>
+                        <option value="Florida">Florida</option>
+                        <option value="California">California</option>
+                    </select>
+                    <h4>Marketing spend</h4><input id="fourth" name="market" placeholder="Marketing"
+                        required="required">
+
+                </div>
+                <div class="button">
+                    <button>Calculate</button>
+                </div>
+
+            </div>
+        </form>
+
+        <div class="h">
+            <h3>The predicted Profit is ${{Pred}}</h3>
+        </div>
+
+
+
+
+        <br><br>
+
+        <style>
+            body,
+            html {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Arial, sans-serif;
+            }
+
+            .main {
+                text-align: center;
+            }
+
+            .body_form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .left_side,
+            .right_side {
+                width: 50%;
+                text-align: left;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            .button {
+                margin-top: 20px;
+            }
+
+            .button button {
+                /* background-color: blue; */
+                border-radius: 4px;
+                border-color: transparent;
+                font-size: 25px;
+                padding: 10px 20px;
+            }
+
+            .h {
+                margin-top: 20px;
+            }
+        </style>
+    </div>
+</body>
+
+</html>
